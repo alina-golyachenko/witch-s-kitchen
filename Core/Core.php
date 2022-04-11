@@ -86,7 +86,6 @@ class Core
 //        $path = $_GET['path'];
 //        var_dump($_GET['path']);
         $path = $_SERVER['REQUEST_URI'];
-        var_dump($path);
 
         # разбиваем адрес на кусочки
         $pathParts = explode('/', $path);
@@ -94,7 +93,7 @@ class Core
         # вытаскиваем имя класса. Если такого нет, ставим класс по умолчанию
         $className = ucfirst($pathParts[0]);
         var_dump(ucfirst($pathParts[0]));
-        if(empty($className) && empty($pathParts[1])){
+        if(empty($className) && $pathParts[1] === ""){
             # получаем полный путь к классу
             $fullClassName = 'Controllers\\Recipes';
         }
@@ -115,10 +114,7 @@ class Core
             $fullMethodName = 'action'.$methodName;
         }
         var_dump($fullClassName);
-        var_dump($fullMethodName);
         var_dump(class_exists($fullClassName));
-        $controller = new $fullClassName();
-        var_dump(method_exists($controller, $fullMethodName));
 
         # Если такой класс есть в папке с контроллерами,
         # создаём объект одноименного контроллера
