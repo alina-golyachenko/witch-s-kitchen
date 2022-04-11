@@ -92,11 +92,9 @@ class Core
 //            array_shift();
 //        }
         $pathParts = explode('/', $path);
-        var_dump($pathParts);
         # вытаскиваем имя класса. Если такого нет, ставим класс по умолчанию
         $className = ucfirst($pathParts[0]);
-        var_dump(ucfirst($pathParts[0]));
-        var_dump(ucfirst($pathParts[1]));
+
         if(empty($className) && empty($pathParts[1])){
             # получаем полный путь к классу
             $fullClassName = 'Controllers\\Recipes';
@@ -110,7 +108,12 @@ class Core
 
 
         # получаем имя нужного метода
-        $methodName = ucfirst($pathParts[1]);
+        if (count($pathParts) > 2){
+            $methodName = ucfirst($pathParts[2]);
+        }
+        else{
+            $methodName = '';
+        }
         # если метода нет, вызываем тот, что по
         # умолчанию, чтобы не было ошибки
         if(empty($methodName)){
