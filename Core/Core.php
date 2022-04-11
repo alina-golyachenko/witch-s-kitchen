@@ -97,7 +97,7 @@ class Core
         $className = ucfirst($pathParts[0]);
         var_dump(ucfirst($pathParts[0]));
         var_dump(ucfirst($pathParts[1]));
-        if(empty($className)){
+        if(empty($className) && empty($pathParts[1])){
             # получаем полный путь к классу
             $fullClassName = 'Controllers\\Recipes';
         }
