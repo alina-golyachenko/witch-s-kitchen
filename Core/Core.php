@@ -91,9 +91,8 @@ class Core
         $pathParts = explode('/', $path);
         # вытаскиваем имя класса. Если такого нет, ставим класс по умолчанию
         $className = ucfirst($pathParts[0]);
-        var_dump($pathParts[0]);
-        var_dump($pathParts[1]);
-        if(empty($className) && ($pathParts[1] === '' || count($pathParts) === 1)){
+        var_dump($path);
+        if(empty($className)){
             # получаем полный путь к классу
             $fullClassName = 'Controllers\\Recipes';
         }
