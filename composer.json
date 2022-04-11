@@ -1,6 +1,6 @@
 {
   "autoload": {
-    "files": ["Config/config.php", "Files/cloud.png"],
+    "files": ["Config/config.php"],
     "classmap": ["Core", "Controllers"],
     "psr-4": {
       "Core\\": "Core",
