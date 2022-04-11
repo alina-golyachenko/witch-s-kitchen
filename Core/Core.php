@@ -83,14 +83,10 @@ class Core
     public function run(){
 
         # из адресной строки вытаскиваем адрес
-//        $path = $_GET['path'];
-//        var_dump($_GET['path']);
         $path = $_SERVER['REQUEST_URI'];
 
         # разбиваем адрес на кусочки
-//        if (count($path) !== 1){
-//            array_shift();
-//        }
+
         $pathParts = explode('/', $path);
         # вытаскиваем имя класса. Если такого нет, ставим класс по умолчанию
         $className = ucfirst($pathParts[0]);
@@ -106,7 +102,7 @@ class Core
             $fullClassName = 'Controllers\\'.$className;
         }
 
-
+        var_dump($pathParts);
         # получаем имя нужного метода
         if (count($pathParts) > 2){
             $methodName = ucfirst($pathParts[2]);
@@ -123,8 +119,6 @@ class Core
         else{
             $fullMethodName = 'action'.$methodName;
         }
-        var_dump($fullClassName);
-        var_dump(class_exists($fullClassName));
 
         # Если такой класс есть в папке с контроллерами,
         # создаём объект одноименного контроллера
@@ -143,11 +137,9 @@ class Core
                 foreach ($method -> getParameters() as $parameter){
                     array_push($paramsArray, isset($_GET[$parameter -> name]) ? $_GET[$parameter -> name] : null);
                 }
-                var_dump($paramsArray);
 
                 # передаём массив не целиком, а как отдельные параметры
                 $result = $method -> invokeArgs($controller, $paramsArray);
-                var_dump($result);
 
                 # устанавливаем нужные параметры для шаблона в приватное поле
                 if (is_array($result)){
