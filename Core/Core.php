@@ -101,6 +101,9 @@ class Core
             # получаем полный путь к классу
             $fullClassName = 'Controllers\\Recipes';
         }
+        else if (empty($className) && !empty($pathParts[1])){
+            $fullClassName = 'Controllers\\'.$pathParts[1];
+        }
         else{
             $fullClassName = 'Controllers\\'.$className;
         }
