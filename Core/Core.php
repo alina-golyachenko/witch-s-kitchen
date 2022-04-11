@@ -88,13 +88,16 @@ class Core
         $path = $_SERVER['REQUEST_URI'];
 
         # разбиваем адрес на кусочки
+        if (count($path) !== 1){
+            array_shift();
+        }
         $pathParts = explode('/', $path);
         var_dump($pathParts);
         # вытаскиваем имя класса. Если такого нет, ставим класс по умолчанию
         $className = ucfirst($pathParts[0]);
         var_dump(ucfirst($pathParts[0]));
         var_dump(ucfirst($pathParts[1]));
-        if(empty($className) && $pathParts[1] === ""){
+        if(empty($className)){
             # получаем полный путь к классу
             $fullClassName = 'Controllers\\Recipes';
         }
