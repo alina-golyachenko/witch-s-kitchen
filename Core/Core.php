@@ -82,9 +82,12 @@ class Core
     # подходящий по имени классу и также метод
     public function run(){
 
-        # из адресной строки вытаскиваем адрес
-        $path = $_SERVER['REQUEST_URI'];
+        $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
+        # из адресной строки вытаскиваем адрес
+        $parsed = parse_url($actual_link);
+        $path = $parsed['path'];
+        var_dump($path);
         # разбиваем адрес на кусочки
 
         $pathParts = explode('/', $path);
