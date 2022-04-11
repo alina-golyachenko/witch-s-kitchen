@@ -102,7 +102,7 @@ class Core
             $fullClassName = 'Controllers\\Recipes';
         }
         else if (empty($className) && !empty($pathParts[1])){
-            $fullClassName = 'Controllers\\'.$pathParts[1];
+            $fullClassName = 'Controllers\\'.ucfirst($pathParts[1]);
         }
         else{
             $fullClassName = 'Controllers\\'.$className;
