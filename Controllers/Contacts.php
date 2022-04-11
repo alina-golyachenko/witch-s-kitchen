@@ -1,7 +1,7 @@
 <?php
 
 namespace Controllers;
-require "vendor\autoload.php";
+
 class Contacts extends \Core\Controller
 {
     public function actionIndex(){

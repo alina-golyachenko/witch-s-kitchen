@@ -1,7 +1,7 @@
 <?php
 
 namespace Controllers;
-require "vendor\autoload.php";
+
 use Core\Controller;
 
 class Users extends Controller
