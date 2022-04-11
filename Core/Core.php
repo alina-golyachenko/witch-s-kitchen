@@ -148,6 +148,8 @@ class Core
                 if (is_array($result)){
                     self::$mainTemplate -> setParams($result);
                 }
+
+                var_dump(method_exists($fullMethodName));
             }
             else{
                 self::$mainTemplate -> display('Views/Layout/404.php');
