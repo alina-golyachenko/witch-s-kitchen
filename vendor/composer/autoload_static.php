@@ -20,6 +20,7 @@ class ComposerStaticInit921a1efd6e0a901b613e34b03d11d554
             'Core\\DB\\' => 8,
             'Core\\Controller\\' => 16,
             'Core\\' => 5,
+            'Controllers\\Recipes\\' => 20,
             'Controllers\\' => 12,
         ),
     );
@@ -40,6 +41,10 @@ class ComposerStaticInit921a1efd6e0a901b613e34b03d11d554
         'Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Core',
+        ),
+        'Controllers\\Recipes\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Controllers/Recipes',
         ),
         'Controllers\\' => 
         array (

@@ -10,5 +10,6 @@ return array(
     'Core\\DB\\' => array($baseDir . '/Core/DB'),
     'Core\\Controller\\' => array($baseDir . '/Core/Controller'),
     'Core\\' => array($baseDir . '/Core'),
+    'Controllers\\Recipes\\' => array($baseDir . '/Controllers/Recipes'),
     'Controllers\\' => array($baseDir . '/Controllers'),
 );

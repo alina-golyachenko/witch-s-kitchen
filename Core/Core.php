@@ -95,10 +95,10 @@ class Core
         $className = ucfirst($pathParts[0]);
         if(empty($className)){
             # получаем полный путь к классу
-            $fullClassName = '/app/Controllers/Recipes';
+            $fullClassName = 'Controllers/Recipes';
         }
         else{
-            $fullClassName = '/app/Controllers/'.$className;
+            $fullClassName = 'Controllers/'.$className;
         }
         echo $fullClassName;
 
