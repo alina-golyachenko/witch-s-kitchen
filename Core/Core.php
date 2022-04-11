@@ -86,12 +86,13 @@ class Core
 //        $path = $_GET['path'];
 //        var_dump($_GET['path']);
         $path = $_SERVER['REQUEST_URI'];
+        var_dump($path);
 
         # разбиваем адрес на кусочки
         $pathParts = explode('/', $path);
+        var_dump($pathParts);
         # вытаскиваем имя класса. Если такого нет, ставим класс по умолчанию
         $className = ucfirst($pathParts[0]);
-        var_dump($path);
         var_dump(ucfirst($pathParts[0]));
         if(empty($className)){
             # получаем полный путь к классу
