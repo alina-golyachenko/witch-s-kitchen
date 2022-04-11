@@ -1,14 +1,14 @@
 <ul class="clouds">
-    <li><img src="Files\Images\cloud.png"></li>
-    <li><img src="Files\Images\cloud.png"></li>
-    <li><img src="Files\Images\cloud.png"></li>
-    <li><img src="Files\Images\cloud.png"></li>
-    <li><img src="Files\Images\cloud.png"></li>
-    <li><img src="Files\Images\cloud.png"></li>
-    <li><img src="Files\Images\cloud.png"></li>
-    <li><img src="Files\Images\cloud.png"></li>
-    <li><img src="Files\Images\cloud.png"></li>
-    <li><img src="Files\Images\cloud.png"></li>
+    <li><img src=".\Files\Images\cloud.png"></li>
+    <li><img src=".\Files\Images\cloud.png"></li>
+    <li><img src=".\Files\Images\cloud.png"></li>
+    <li><img src=".\Files\Images\cloud.png"></li>
+    <li><img src=".\Files\Images\cloud.png"></li>
+    <li><img src=".\Files\Images\cloud.png"></li>
+    <li><img src=".\Files\Images\cloud.png"></li>
+    <li><img src=".\Files\Images\cloud.png"></li>
+    <li><img src=".\Files\Images\cloud.png"></li>
+    <li><img src=".\Files\Images\cloud.png"></li>
 </ul>
 
 <div id="addingContainer" style="margin-bottom: 120px">
