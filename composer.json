@@ -1,0 +1,13 @@
+{
+  "autoload": {
+    "files": ["Config/config.php"],
+    "classmap": ["Core", "Controllers"],
+    "psr-4": {
+      "Core\\": "Core",
+      "Core\\DB\\": "Core\\DB",
+      "Controllers\\": "Controllers",
+      "Models\\": "Models",
+      "Core\\Controller\\": "Core\\Controller"
+    }
+  }
+}
