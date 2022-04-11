@@ -135,11 +135,11 @@ class Core
                 foreach ($method -> getParameters() as $parameter){
                     array_push($paramsArray, isset($_GET[$parameter -> name]) ? $_GET[$parameter -> name] : null);
                 }
-
+                var_dump($paramsArray);
 
                 # передаём массив не целиком, а как отдельные параметры
                 $result = $method -> invokeArgs($controller, $paramsArray);
-
+                var_dump($result);
 
                 # устанавливаем нужные параметры для шаблона в приватное поле
                 if (is_array($result)){
