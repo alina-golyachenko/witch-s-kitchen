@@ -95,10 +95,10 @@ class Core
         $className = ucfirst($pathParts[0]);
         if(empty($className)){
             # получаем полный путь к классу
-            $fullClassName = 'Controllers/Recipes';
+            $fullClassName = '/Controllers/Recipes';
         }
         else{
-            $fullClassName = 'Controllers/'.$className;
+            $fullClassName = '/Controllers/'.$className;
         }
         echo $fullClassName;
 
@@ -109,10 +109,10 @@ class Core
         # умолчанию, чтобы не было ошибки
         if(empty($methodName)){
             # получаем полный путь к методу
-            $fullMethodName = '/actionIndex';
+            $fullMethodName = 'actionIndex';
         }
         else{
-            $fullMethodName = '/action'.$methodName;
+            $fullMethodName = 'action'.$methodName;
         }
         echo $fullMethodName;
 
