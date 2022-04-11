@@ -83,7 +83,7 @@ class Recipes extends Controller
 
         if (empty($this -> user)){
 
-            return header( "refresh:0;url=\\users\\login" );
+            return header("refresh:0;url=\\users\\login");
         }
 
         if ($this -> isPost()){

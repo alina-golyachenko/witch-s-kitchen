@@ -1,7 +1,7 @@
 <?php
 
 namespace Core;
-
+require "vendor\autoload.php";
 /**
  * Базовый класс для всех контроллеров
  * @package Core
