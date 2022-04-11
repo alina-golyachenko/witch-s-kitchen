@@ -13,7 +13,7 @@ class Users extends Controller
 
     public function actionProfile(){
         if(!isset($_SESSION['user'])){
-            header( "Location: /users/register" );
+            header("Location:\\users\\register");
 
         }
         else{
@@ -34,7 +34,7 @@ class Users extends Controller
     }
 
     function actionLogin(){
-        $mainTitle = 'Witch\s Kitchen';
+        $mainTitle = 'Witch\'s Kitchen';
 
         if(isset($_SESSION['user'])){
             header( "refresh:1;url=\\" );
