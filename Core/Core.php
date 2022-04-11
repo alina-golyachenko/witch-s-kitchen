@@ -116,6 +116,9 @@ class Core
         }
         echo $fullMethodName;
 
+        var_dump(class_exists($fullClassName));
+        $controller = new $fullClassName();
+        var_dump(method_exists($controller, $fullMethodName));
 
         # Если такой класс есть в папке с контроллерами,
         # создаём объект одноименного контроллера
