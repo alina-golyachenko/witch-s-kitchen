@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '8da1fb9565b7cada926e2d495f43fb11' => $baseDir . '/Config/config.php',
+    'e562ecb84455b9ae5ad7999b1478253a' => $baseDir . '/Files/cloud.png',
 );

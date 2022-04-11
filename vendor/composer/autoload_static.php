@@ -8,6 +8,7 @@ class ComposerStaticInit921a1efd6e0a901b613e34b03d11d554
 {
     public static $files = array (
         '8da1fb9565b7cada926e2d495f43fb11' => __DIR__ . '/../..' . '/Config/config.php',
+        'e562ecb84455b9ae5ad7999b1478253a' => __DIR__ . '/../..' . '/Files/cloud.png',
     );
 
     public static $prefixLengthsPsr4 = array (
