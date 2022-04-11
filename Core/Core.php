@@ -100,6 +100,7 @@ class Core
         else{
             $fullClassName = 'Controllers\\'.$className;
         }
+        echo $fullClassName;
 
 
         # получаем имя нужного метода
@@ -113,6 +114,11 @@ class Core
         else{
             $fullMethodName = 'action'.$methodName;
         }
+        echo $fullMethodName;
+
+        var_dump(class_exists($fullClassName));
+        $controller = new $fullClassName();
+        var_dump(method_exists($controller, $fullMethodName));
 
         # Если такой класс есть в папке с контроллерами,
         # создаём объект одноименного контроллера
@@ -133,14 +139,17 @@ class Core
                     array_push($paramsArray, isset($_GET[$parameter -> name]) ? $_GET[$parameter -> name] : null);
                 }
 
+                var_dump($paramsArray);
 
                 # передаём массив не целиком, а как отдельные параметры
                 $result = $method -> invokeArgs($controller, $paramsArray);
 
+                var_dump($result);
 
                 # устанавливаем нужные параметры для шаблона в приватное поле
                 if (is_array($result)){
                     self::$mainTemplate -> setParams($result);
+                    var_dump(self::$mainTemplate);
                 }
             }
             else{
