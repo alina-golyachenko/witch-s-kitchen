@@ -87,7 +87,6 @@ class Core
         # из адресной строки вытаскиваем адрес
         $parsed = parse_url($actual_link);
         $path = $parsed['path'];
-        var_dump($path);
         # разбиваем адрес на кусочки
 
         $pathParts = explode('/', $path);
@@ -105,7 +104,6 @@ class Core
             $fullClassName = 'Controllers\\'.$className;
         }
 
-        var_dump($pathParts);
         # получаем имя нужного метода
         if (count($pathParts) > 2){
             $methodName = ucfirst($pathParts[2]);
@@ -149,7 +147,6 @@ class Core
                     self::$mainTemplate -> setParams($result);
                 }
 
-//                var_dump(method_exists($fullMethodName));
             }
             else{
                 self::$mainTemplate -> display('Views/Layout/404.php');
