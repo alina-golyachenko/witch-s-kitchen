@@ -86,6 +86,7 @@ class Core
 //        $path = $_GET['path'];
 //        var_dump($_GET['path']);
         $path = $_SERVER['REQUEST_URI'];
+        var_dump($path);
 
         # разбиваем адрес на кусочки
         $pathParts = explode('/', $path);
