@@ -23,14 +23,14 @@ else{
             <span class="card-author">@<?=$userModel -> getUserById($recipe['user_id'])['username'] ?></span>
             <h2 class="card-title"><?=$recipe['title'] ?></h2>
             <span class="card-description">
-                <h2>Інгредієнти:</h2>
+                <h2>Ingredients:</h2>
             <?=$recipe['ingredients'] ?>
-                <h2>Приготування:</h2>
+                <h2>Cooking directions:</h2>
                 <?=$recipe['description'] ?>
             </span>
             <?php if ($canEdit) : ?>
-            <a class="regularSection" href="\recipes\edit?id=<?=$recipe['id'] ?>" class="card-read regularSection">Редагувати</a>
-            <a class="regularSection" href="\recipes\delete?id=<?=$recipe['id'] ?>" class="card-read regularSection">Видалити</a>
+            <a class="regularSection" href="\recipes\edit?id=<?=$recipe['id'] ?>" class="card-read regularSection">Edit</a>
+            <a class="regularSection" href="\recipes\delete?id=<?=$recipe['id'] ?>" class="card-read regularSection">Delete</a>
             <?php endif; ?>
             <a class="card-tag card-circle subtle" href="\recipes\filterByCategory?category=<?=$recipe['category'] ?>"><span class="inside-circle"><?=$recipe['category'] ?></span></a>
         </div>
