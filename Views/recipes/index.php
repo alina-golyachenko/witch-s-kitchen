@@ -17,7 +17,6 @@
                         button.addEventListener('click', () => {
                             link.innerHTML = button.value;
                             window.location.href = "\\recipes\\sort?sort=" + button.value;
-//                             link.href = '\\recipes\\sort?sort=' + button.value;
                         });
                     }
                     link.style.textDecoration = "none";
