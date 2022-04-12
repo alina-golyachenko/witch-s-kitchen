@@ -18,7 +18,7 @@ class Users extends Controller
         }
         else{
             return $this -> render('profile', null, [
-                'MainTitle' => 'Мій профіль'
+                'MainTitle' => 'My profile'
             ]);
         }
     }
@@ -27,7 +27,7 @@ class Users extends Controller
         header( "refresh:1;url=\\recipes" );
 
         unset($_SESSION['user']);
-        return $this -> renderMessage('ok', 'Ви вийшли з акаунту', null,
+        return $this -> renderMessage('ok', 'You have quit the account', null,
             [
                 'MainTitle' => 'Witch\'s Kitchen'
             ]);
@@ -38,7 +38,7 @@ class Users extends Controller
 
         if(isset($_SESSION['user'])){
             header( "refresh:1;url=\\" );
-            return $this -> renderMessage('ok', 'Ви вже увійшли на сайт!', null,
+            return $this -> renderMessage('ok', 'You are already authenticated!', null,
                 [
                     'MainTitle' => $mainTitle
                 ]);
@@ -55,7 +55,7 @@ class Users extends Controller
 
                 $_SESSION['user'] = $user;
 
-                $result = $this -> renderMessage('ok', 'Ви успішно аутентифіковані!', null,
+                $result = $this -> renderMessage('ok', 'Authentication was successful!', null,
                 [
                     'MainTitle' => $mainTitle
                 ]);
@@ -67,8 +67,8 @@ class Users extends Controller
             }
             else{
                 return $this -> render('registerAndLogin', null, [
-                    'MainTitle' => 'Вхід/реєстрація',
-                    'MessageText' => 'Неправильний логін або пароль',
+                    'MainTitle' => 'Login/Sign in',
+                    'MessageText' => 'Wrong login or password',
                     'MessageClass' => 'danger'
                 ]);
             }
@@ -76,7 +76,7 @@ class Users extends Controller
         }
         else{
             $params = [
-                'MainTitle' => 'Вхід/реєстрація'
+                'MainTitle' => 'Login/Sign in'
             ];
             return $this -> render('registerAndLogin', null, $params);
         }
@@ -89,9 +89,9 @@ class Users extends Controller
             $result = $this -> usersModel -> addUser($_POST);
 
             if ($result === true){
-                $result = $this -> renderMessage('ok', 'Користувач успішно зареєстрований', null,
+                $result = $this -> renderMessage('ok', 'Registration was successful', null,
                     [
-                        'MainTitle' => 'Реєстрація'
+                        'MainTitle' => 'Registration'
                     ]);
 
                 header( "refresh:1;url=\\recipes" );
@@ -102,7 +102,7 @@ class Users extends Controller
             else{
                 $message = implode('<br>', $result);
                 return $this -> render('registerAndLogin', null, [
-                    'MainTitle' => 'Реєстрація',
+                    'MainTitle' => 'Registration',
                     'MessageText' => $message,
                     'MessageClass' => 'danger'
                 ]);
@@ -110,7 +110,7 @@ class Users extends Controller
         }
         else{
             $params = [
-                'MainTitle' => 'Реєстрація'
+                'MainTitle' => 'Registration'
             ];
             return $this -> render('registerAndLogin', null, $params);
         }
