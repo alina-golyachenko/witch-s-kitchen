@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="..\Styles\message.css">
 <link rel="stylesheet" href="..\Styles\recipes.css">
+<link rel="shortcut icon" href="Files\Icons\title_Icon.ico" />
 
 <div class="alert alert-info" role="alert">
     Are you sure you want to delete the recipe of "<?=$model['title'] ?>"?

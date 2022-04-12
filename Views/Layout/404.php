@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="..\Styles\404.css">
+<link rel="shortcut icon" href="Files\Icons\title_Icon.ico" />
 
 <div class="container-404">
     <div>

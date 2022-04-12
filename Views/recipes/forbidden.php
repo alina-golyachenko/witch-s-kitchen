@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="..\Styles\forbidden.css">
+<link rel="shortcut icon" href="Files\Icons\title_Icon.ico" />
 
 <div id="forbiddenContainer">
     <div id="container">

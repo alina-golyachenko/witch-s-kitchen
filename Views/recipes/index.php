@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="..\Styles\recipes.css">
+<link rel="shortcut icon" href="Files\Icons\title_Icon.ico" />
 
 <div class="mainSection">
     <div class="diva1">

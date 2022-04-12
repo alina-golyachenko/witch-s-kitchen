@@ -1,6 +1,8 @@
 <div id="addingContainer">
     <link rel="stylesheet" href="..\Styles\add.css">
     <link rel="stylesheet" type="text/css" href="slide navbar style.css">
+    <link rel="shortcut icon" href="Files\Icons\title_Icon.ico" />
+
     <script type="text/javascript" src="..\froala_editor_4.0.8\js\froala_editor.min.js"></script>    <div class="main">
         <link rel="stylesheet" href="..\froala_editor_4.0.8\css\froala_editor.css">
         <link rel="stylesheet" href="..\froala_editor_4.0.8\css\froala_style.css">

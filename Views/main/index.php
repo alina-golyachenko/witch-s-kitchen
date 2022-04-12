@@ -1,4 +1,4 @@
-<div style="background-color: pink; width: 200px; height: 200px">
+<div style="background-color: pink; width: 200px; height: 200px"><link rel="shortcut icon" href="Files\Icons\title_Icon.ico" />
 
 <div id="container"></div>
 </div>

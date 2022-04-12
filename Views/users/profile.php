@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="..\Styles\profile.css">
+<link rel="shortcut icon" href="Files\Icons\title_Icon.ico" />
 
 <?php
 $stringIndex = '';

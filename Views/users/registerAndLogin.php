@@ -13,7 +13,9 @@
 
 <div id="addingContainer" style="margin-bottom: 120px">
         <link rel="stylesheet" href="..\Styles\registrationForm.css">
-        <script async src="..\JS\registrationForm.js"></script>
+    <link rel="shortcut icon" href="Files\Icons\title_Icon.ico" />
+
+    <script async src="..\JS\registrationForm.js"></script>
         <link rel="stylesheet" type="text/css" href="slide navbar style.css">
 
         <div class="main">
