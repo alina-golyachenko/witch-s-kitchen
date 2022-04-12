@@ -143,11 +143,11 @@ class Recipes extends Model
     }
 
     public function getSortedRecipes($sort){
-        if ($sort == 'Зверху новіші'){
+        if ($sort == 'Newer first'){
             return \Core\Core::getInstance() -> getDB() -> select('recipes',
                 '*', null, ['date_of_publication' => 'DESC']);
         }
-        elseif ($sort == 'Зверху старіші'){
+        elseif ($sort == 'Older first'){
             return \Core\Core::getInstance() -> getDB() -> select('recipes',
                 '*', null, ['date_of_publication' => 'ASC']);
         }

@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <button type="submit">Зберегти</button>
+            <button type="submit">Save</button>
         </form>
 
     </div>

@@ -23,7 +23,7 @@ class Recipes extends Controller
      * Будет отображать список рецептов
      */
     public function actionIndex(){
-        $mainTitle = 'Рецепти';
+        $mainTitle = 'Recipes';
         global $Config;
         $lastRecipes = $this ->recipesModel -> getLastRecipes($Config['RecipesCount']);
         return $this -> render('index', [
@@ -79,7 +79,7 @@ class Recipes extends Controller
 
     public function actionAdd(){
 
-        $mainTitle = 'Додати рецепт';
+        $mainTitle = 'Add recipe';
 
         if (empty($this -> user)){
 
@@ -93,7 +93,7 @@ class Recipes extends Controller
 
                 $this->checkPicture($result['id']);
                 header( "refresh:1;url=\\recipes" );
-                return $this -> renderMessage('ok', 'Рецепт успішно створено', null,
+                return $this -> renderMessage('ok', 'The recipe has been successfully created', null,
                     [
                         'MainTitle' => $mainTitle
                     ]
@@ -104,9 +104,8 @@ class Recipes extends Controller
                 $message = implode('</br>', $result['messages']);
                 return $this -> render('form',
                 [
-                    // model - это откуда берутся данные
                     'model' => $_POST,
-                    'PageTitle' => 'Додати рецепт'
+                    'PageTitle' => 'Add recipe'
                 ],
                 [
                    'MainTitle' => $mainTitle,
@@ -121,7 +120,7 @@ class Recipes extends Controller
                 'MainTitle' => $mainTitle
             ];
             return $this -> render('form', [
-                'PageTitle' => 'Додати рецепт'
+                'PageTitle' => 'Add recipe'
             ], $params);
         }
 
@@ -149,8 +148,8 @@ class Recipes extends Controller
             if ($result === true) {
                 $this->checkPicture($id);
                 header("refresh:2;url=\\recipes\\view?id={$recipe['id']}");
-                return $this->renderMessage('ok', 'Рецепт успішно збережено', [
-                    'PageTitle' => 'Редагувати рецепт'
+                return $this->renderMessage('ok', 'The recipe has been successfully saved', [
+                    'PageTitle' => 'Edit the recipe'
                 ],
                     [
                         'MainTitle' => $recipe['title']
@@ -172,10 +171,10 @@ class Recipes extends Controller
 return $this->render('form',
             [
                 'model' => $recipe,
-                'PageTitle' => 'Редагувати рецепт'
+                'PageTitle' => 'Edit the recipe'
             ],
             [
-                'MainTitle' => 'Редагувати рецепт'
+                'MainTitle' => 'Edit the recipe'
             ]);
         }
     }
@@ -195,8 +194,8 @@ return $this->render('form',
                 $recipe = $this -> recipesModel -> getRecipeById($id);
                 return $this -> render('delete', ['model' => $recipe],
                     [
-                        'MainTitle' => 'Видалити рецепт',
-                        'MessageText' => 'Помилка видалення рецепта',
+                        'MainTitle' => 'Deletion of the recipe',
+                        'MessageText' => 'Error',
                         'MessageClass' => 'danger'
                     ]);
             }
@@ -205,7 +204,7 @@ return $this->render('form',
         return $this -> render('delete', [
             'model' => $recipe
         ], [
-            'MainTitle' => 'Видалення рецепту'
+            'MainTitle' => 'Deletion of the recipe'
         ]);
     }
 
@@ -217,7 +216,7 @@ return $this->render('form',
                 return $this -> render('index', [
                     'lastRecipes' => $recipes
         ], [
-                    'MainTitle' => 'Усі рецепти'
+                    'MainTitle' => 'All recipes'
                 ]);
             }
             else {
@@ -244,11 +243,11 @@ return $this->render('form',
                 return $this -> render('index', [
                     'lastRecipes' => $recipes
                 ], [
-                    'MainTitle' => 'Рецепти юзерів'
+                    'MainTitle' => 'Recipes of the users'
                 ]);
             }
             else {
-                $mainTitle = 'Рецепти';
+                $mainTitle = 'Recipes';
                 global $Config;
                 $lastRecipes = $this->recipesModel->getLastRecipes($Config['RecipesCount']);
                 return $this->render('index', [
@@ -268,16 +267,18 @@ return $this->render('form',
             $sort = $_GET['sort'];
             if($this -> recipesModel -> getSortedRecipes($sort)){
                 $recipes = $this -> recipesModel -> getSortedRecipes($sort);
+                var_dump($recipes);
                 return $this -> render('index', [
                     'lastRecipes' => $recipes
                 ], [
-                    'MainTitle' => 'Усі рецепти'
+                    'MainTitle' => 'All recipes'
                 ]);
             }
             else {
-                $mainTitle = 'Рецепти';
+                $mainTitle = 'Recipes';
                 global $Config;
                 $lastRecipes = $this->recipesModel->getLastRecipes($Config['RecipesCount']);
+                var_dump($lastRecipes);
                 return $this->render('index', [
                     'lastRecipes' => $lastRecipes
                 ],
