@@ -4,7 +4,7 @@
 <div class="mainSection">
     <div class="diva1">
 
-        <a href="" class="sectionName" id="sort" style="text-decoration: none">Sort by</a>
+        <a class="sectionName" id="sort" style="text-decoration: none">Sort by</a>
 
         <div class="buttonSection">
             <div class="buttons">
