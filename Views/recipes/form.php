@@ -9,29 +9,29 @@
             <!--             enctype="multipart/form-data" означает,-->
             <!--             что теперь форма может отправлять данные на сервер-->
             <label for="chk" aria-hidden="true"><?=$PageTitle ?></label>
-            <input id="title" class="regularSection input" type="text" name="title" placeholder="назва" value="<?= $model['title'] ?>">
+            <input id="title" class="regularSection input" type="text" name="title" placeholder="name" value="<?= $model['title'] ?>">
 
-            <textarea id="ingredients" class="textblock regularSection" type="text" name="ingredients" placeholder="інгредієнти та їх кількість. Вводьте кожен з нового рядку"><?= $model['ingredients'] ?></textarea>
-            <textarea id="description" class="regularSection textblock" type="text" name="description" placeholder="опис приготування"><?= $model['description'] ?></textarea>
+            <textarea id="ingredients" class="textblock regularSection" type="text" name="ingredients" placeholder="ingredients and their names. Enter every ingredient from a new line"><?= $model['ingredients'] ?></textarea>
+            <textarea id="description" class="regularSection textblock" type="text" name="description" placeholder="cooking directions"><?= $model['description'] ?></textarea>
 
-            <textarea id="shortDescription" class="textblock regularSection" type="text" name="shortDescription" placeholder="короткий опис рецепту"><?= $model['shortDescription'] ?></textarea>
+            <textarea id="shortDescription" class="textblock regularSection" type="text" name="shortDescription" placeholder="short description of the recipe"><?= $model['shortDescription'] ?></textarea>
 
-            <label style="font-size: 20px" for="chk" aria-hidden="true">Додати фото:</label>
+            <label style="font-size: 20px" for="chk" aria-hidden="true">Add picture:</label>
             <input type="file" accept="image/jpg, image/png, image/jpeg" class="picture" name="picture" id="picture">
 
             <div class="mainSection">
                 <div class="diva1">
-                    <textarea class="sectionName" id="category" name ='category'><?= $model['category'] ?? 'Категорія' ?></textarea>
+                    <textarea class="sectionName" id="category" name ='category'><?= $model['category'] ?? 'Cathegory' ?></textarea>
 
                     <div class="buttonSection">
                         <div class="buttons">
-                            <input class="btna btna1 input" type="button" value="Перші страви">
-                            <input class="btna btna2 input" type="button" value="Основні страви">
-                            <input class="btna btna3 input" type="button" value="Закуски">
-                            <input class="btna btna4 input" type="button" value="Випічка">
-                            <input class="btna btna5 input" type="button" value="Десерти">
-                            <input class="btna btna6 input" type="button" value="Напої">
-                            <input class="btna btna7 input" type="button" value="Інше">
+                            <input class="btna btna1 input" type="button" value="First course">
+                            <input class="btna btna2 input" type="button" value="Main course">
+                            <input class="btna btna3 input" type="button" value="Appetizers">
+                            <input class="btna btna4 input" type="button" value="Baked goods">
+                            <input class="btna btna5 input" type="button" value="Desserts">
+                            <input class="btna btna6 input" type="button" value="Drinks">
+                            <input class="btna btna7 input" type="button" value="Other">
                             <script>
                                 let textarea = document.getElementById('category');
                                 let buttons = document.getElementsByClassName('btna');

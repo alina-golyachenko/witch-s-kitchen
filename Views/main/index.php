@@ -17,5 +17,4 @@ foreach ($arr as $recipe){
     }
 }
 
-# Ссылон на бесплатный парсер: 'https://snipp.ru/tools/parser-html';
 

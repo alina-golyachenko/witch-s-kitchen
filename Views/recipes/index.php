@@ -3,17 +3,12 @@
 <div class="mainSection">
     <div class="diva1">
 
-        <a href="" class="sectionName" id="sort">Сортування</a>
+        <a href="" class="sectionName" id="sort">Sort by</a>
 
         <div class="buttonSection">
             <div class="buttons">
-                <input class="btna btna1 input" type="button" value="Зверху новіші">
-                <input class="btna btna2 input" type="button" value="Зверху старіші">
-<!--                <input class="btna btna3 input" type="button" value="Закуски">-->
-<!--                <input class="btna btna4 input" type="button" value="Випічка">-->
-<!--                <input class="btna btna5 input" type="button" value="Десерти">-->
-<!--                <input class="btna btna6 input" type="button" value="Напої">-->
-<!--                <input class="btna btna7 input" type="button" value="Інше">-->
+                <input class="btna btna1 input" type="button" value="Newer first">
+                <input class="btna btna2 input" type="button" value="Older first">
                 <script>
                     let link = document.getElementById('sort');
                     let buttons = document.getElementsByClassName('btna');
@@ -30,7 +25,7 @@
         </div>
     </div>
 </div></br>
-<a class="regularSection" href="\recipes\add">Додати рецепт</a>
+<a class="regularSection" href="\recipes\add">Add recipe</a>
 
 
 
@@ -64,7 +59,7 @@ foreach ($lastRecipes as $recipe) : ?>
                 <span class="card-author">@<?=$userModel -> getUserById($recipe['user_id'])['username'] ?></span>
                 <h2 class="card-title"><?=$recipe['title']?></h2>
                 <span class="card-description"><?=$recipe['shortDescription'] ?></span>
-                <a class="regularSection" href="\recipes\view?id=<?=$recipe['id'] ?>" class="card-read regularSection">Переглянути</a>
+                <a class="regularSection" href="\recipes\view?id=<?=$recipe['id'] ?>" class="card-read regularSection">View</a>
                 <a class="card-tag card-circle subtle" href="\recipes\filterByCategory?category=<?=$recipe['category'] ?>"><span class="inside-circle"><?=$recipe['category'] ?></span></a>
             </div>
             <div class="card-media">

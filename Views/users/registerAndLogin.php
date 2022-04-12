@@ -21,26 +21,25 @@
 
             <div class="register">
                 <form enctype="multipart/form-data" method="post" action="\users\register">
-                    <label class="mainLabel" for="chk" aria-hidden="true">Реєстрація</label>
-                    <input id="username" type="text" name="username" value="<?=$_POST['username'] ?>" placeholder="нік" required="">
-                    <input id="email" type="email" name="email" placeholder="пошта" required="" value="<?=$_POST['email'] ?>">
-                    <input id="password" type="password" name="password" placeholder="пароль" required="">
-                    <input type="password" name="repeatPassword" placeholder="повторіть пароль" required="">
+                    <label class="mainLabel" for="chk" aria-hidden="true">Sign in</label>
+                    <input id="username" type="text" name="username" value="<?=$_POST['username'] ?>" placeholder="nickname" required="">
+                    <input id="email" type="email" name="email" placeholder="email" required="" value="<?=$_POST['email'] ?>">
+                    <input id="password" type="password" name="password" placeholder="password" required="">
+                    <input type="password" name="repeatPassword" placeholder="repeat password" required="">
 
-<!--                    <label class="addPictureLabel" style="font-size: 15px" for="chk" aria-hidden="true">Додати фото:</label>-->
                     <input type="file" accept="image/jpg, image/png, image/jpeg" class="picture" name="picture" id="picture">
 
 
-                    <button type="submit">Летс гоу</button>
+                    <button type="submit">Let's go</button>
                 </form>
             </div>
 
             <div class="login">
                 <form method="post" action="\users\login">
-                    <label class="mainLabel" for="chk" aria-hidden="true">Вхід</label>
-                    <input name="email" placeholder="пошта" required="">
-                    <input type="password" name="password" placeholder="пароль" required="">
-                    <button type="submit">Увійти</button>
+                    <label class="mainLabel" for="chk" aria-hidden="true">Login</label>
+                    <input name="email" placeholder="email" required="">
+                    <input type="password" name="password" placeholder="password" required="">
+                    <button type="submit">Login</button>
                 </form>
             </div>
         </div>

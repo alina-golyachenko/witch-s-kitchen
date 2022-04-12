@@ -25,22 +25,19 @@ $userModel = new \Models\Users() ?>
 <nav class="stroke fill">
     <ul>
         <li><a href="/recipes">Witch's Kitchen</a></li>
-        <li class="hidenavli"><a href="/contacts">Контакти</a></li>
+        <li class="hidenavli"><a href="/contacts">Contacts</a></li>
         <? if (!$userModel -> IsUserAuthentificated()) :?>
-        <li class="hidenavli"><a href="\users\login">Вхід/реєстрація</a></li>
+        <li class="hidenavli"><a href="\users\login">Login/Sign in</a></li>
         <? else : ?>
 
-        <li class="hidenavli logout-button"><a href="\users\logout">Вийти</a></li>
+        <li class="hidenavli logout-button"><a href="\users\logout">Quit</a></li>
         <? endif; ?>
     </ul>
-<!--    <span class="username">--><?//=$userModel -> getCurrentUser()['username']?><!--</span>-->
     <? if ($userModel -> IsUserAuthentificated()) :?>
     <a href="\users\profile" class="nav-button"><img src="..\Files\Icons\stars.png">
     <? endif; ?>
     </a>
 
-    <!-- Добавить дропдаун-меню с профилем -->
-<!--    <span style="display: inline-block; float: right">--><?//=$userModel -> getCurrentUser()['email'] ?><!--</span>-->
 </nav>
 
 <div>
@@ -58,8 +55,6 @@ $userModel = new \Models\Users() ?>
 
 <footer class="footer-distributed"">
     <div class="footer-right">
-<!--        <a href="#"></a>-->
-<!--        <a href="#"></a>-->
         <a href="https://gitlab.com/alina_golyachenko1/javascript/coursework">
             GitLab
         </a>

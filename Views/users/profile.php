@@ -24,9 +24,7 @@ else{
         <img data-fancybox="gallery"  src="\<?=$user['picture']?>" class="profile">
     </div>
     <div class="profile-name">@<?=$user['username']?></div>
-<!--    <p class="about">User Interface Designer and<br>front-end developer</p>-->
-    <a href="\recipes\filterByUser?user_id=<?=$user['id'] ?>" class="recipesButton">Рецепти</a>
-<!--    <button class="follow-btn">Following</button>-->
+    <a href="\recipes\filterByUser?user_id=<?=$user['id'] ?>" class="recipesButton">Recipes</a>
     <div>
         <i class="fab fa-facebook-f"></i>
         <i class="fab fa-instagram"></i>
