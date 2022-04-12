@@ -267,7 +267,6 @@ return $this->render('form',
             $sort = $_GET['sort'];
             if($this -> recipesModel -> getSortedRecipes($sort)){
                 $recipes = $this -> recipesModel -> getSortedRecipes($sort);
-                var_dump($recipes);
                 return $this -> render('index', [
                     'lastRecipes' => $recipes
                 ], [
@@ -278,7 +277,6 @@ return $this->render('form',
                 $mainTitle = 'Recipes';
                 global $Config;
                 $lastRecipes = $this->recipesModel->getLastRecipes($Config['RecipesCount']);
-                var_dump($lastRecipes);
                 return $this->render('index', [
                     'lastRecipes' => $lastRecipes
                 ],
