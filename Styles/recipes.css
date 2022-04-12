@@ -49,6 +49,7 @@
     background-color: #ffeaed;
     color: #ee98a7;
     cursor: pointer;
+    text-decoration: none;
 }
 
 
@@ -194,12 +195,10 @@
 
     0%{
         transform: translateY(0);
-        /*opacity: 1;*/
     }
 
     100%{
         transform: translateY(-1000px);
-        /*opacity: 0;*/
         border-radius: 50%;
     }
 
@@ -209,13 +208,11 @@
 
     0%{
         transform: translateY(0);
-        /*opacity: 1;*/
         border-radius: 0;
     }
 
     100%{
         transform: translateY(-1000px);
-        /*opacity: 0;*/
         border-radius: 50%;
     }
 
@@ -319,6 +316,7 @@
     background:#ffa9ba;
     transition:.6s;
     padding: 10px;
+    text-decoration: none;
 }
 
 .emptySection{
