@@ -15,8 +15,10 @@
                     for (let button of buttons) {
                         button.addEventListener('click', () => {
                             link.innerHTML = button.value;
-
-                            link.href = '\\recipes\\sort?sort=' + button.value;
+                            <?php
+                            header("Location:\\recipes\\sort?sort=".button.value);
+                            ?>
+                            // link.href = '\\recipes\\sort?sort=' + button.value;
                         });
                     }
                 </script>
