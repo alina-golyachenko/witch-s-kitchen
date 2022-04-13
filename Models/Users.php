@@ -52,7 +52,7 @@ class Users extends \Models\Model
 
     public function addUser($userRow){
         $validationResult = $this -> validate($userRow);
-
+        var_dump($validationResult);
         if (is_array($validationResult)){
             return $validationResult;
         }
