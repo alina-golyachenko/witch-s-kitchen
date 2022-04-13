@@ -87,9 +87,9 @@ class Users extends \Models\Model
             $userRowFiltered['picture'] = 'Files/Images/cloud.png';
         }
 
-        var_dump($userRowFiltered);
         \Core\Core::getInstance()->getDB()->
         insert('users', $userRowFiltered);
+        return true;
     }
 
     public function authUser($login, $password){
