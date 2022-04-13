@@ -56,7 +56,7 @@ $userModel = new \Models\Users() ?>
 <footer class="footer-distributed"">
     <div class="footer-right">
         <a href="https://github.com/alina-golyachenko/witch-s-kitchen">
-            GitLab
+            GitHub
         </a>
 
     </div>
