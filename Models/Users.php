@@ -42,6 +42,8 @@ class Users extends \Models\Model
             $errors[] = 'Користувач з такою поштою вже є';
         }
 
+        var_dump($errors);
+
         if (count($errors) > 0){
             return $errors;
         }
@@ -52,7 +54,6 @@ class Users extends \Models\Model
 
     public function addUser($userRow){
         $validationResult = $this -> validate($userRow);
-        var_dump($validationResult);
         if (is_array($validationResult)){
             return $validationResult;
         }
