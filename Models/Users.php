@@ -14,32 +14,32 @@ class Users extends \Models\Model
         $errors = [];
 
         if (empty($formRow['username'])){
-            $errors [] = 'Заповніть поле \"нік\"';
+            $errors [] = 'Fill the field \"nickname\"';
         }
         else if(strpos($formRow['username'], ' ')){
-            $errors [] = 'Не використовуйте пробіли для ніку';
+            $errors [] = 'Don\'t use spaces in the nickname';
         }
         if (empty($formRow['email']) || $formRow['email'] == ' '){
-            $errors [] = 'Заповніть поле \"пошта\"';
+            $errors [] = 'Fill the field \"email\"';
         }
         else if(strpos($formRow['email'], ' ')){
-            $errors [] = 'Не використовуйте пробіли для пошти';
+            $errors [] = 'Don\'t use spaces in the email';
         }
         if ($formRow['password'] != $formRow['repeatPassword']){
-            $errors [] = 'Паролі не співпадають';
+            $errors [] = 'Passwords do not match';
         }
         if(strpos($formRow['password'], ' ') || strpos($formRow['repeatPassword'], ' ')){
-            $errors [] = 'Не використовуйте пробіли у паролях';
+            $errors [] = 'Don\'t use spaces in passwords';
         }
 
         $user = $this -> getUserByLogin($formRow['username']);
         if (!empty($user)){
-            $errors[] = 'Користувач з таким ніком вже є';
+            $errors[] = 'This nickname is taken';
         }
 
         $user = $this -> getUserByEmail($formRow['email']);
         if (!empty($user)){
-            $errors[] = 'Користувач з такою поштою вже є';
+            $errors[] = 'There already exists a user with such email';
         }
 
         if (count($errors) > 0){

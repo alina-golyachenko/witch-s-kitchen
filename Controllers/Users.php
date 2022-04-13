@@ -87,7 +87,6 @@ class Users extends Controller
         if ($this -> isPost()){
 
             $result = $this -> usersModel -> addUser($_POST);
-            var_dump($result);
             if ($result === true){
                 $result = $this -> renderMessage('ok', 'Registration was successful', null,
                     [
