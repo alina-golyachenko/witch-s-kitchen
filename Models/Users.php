@@ -42,8 +42,6 @@ class Users extends \Models\Model
             $errors[] = 'Користувач з такою поштою вже є';
         }
 
-        var_dump($errors);
-
         if (count($errors) > 0){
             return $errors;
         }
@@ -89,6 +87,7 @@ class Users extends \Models\Model
             $userRowFiltered['picture'] = 'Files/Images/cloud.png';
         }
 
+        var_dump($userRowFiltered);
         \Core\Core::getInstance()->getDB()->
         insert('users', $userRowFiltered);
     }
