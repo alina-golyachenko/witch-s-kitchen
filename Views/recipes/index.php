@@ -5,6 +5,7 @@
     <div class="diva1">
 
         <a href="" class="sectionName" id="sort" style="text-decoration: none">Sort by</a>
+        <a class="sectionName" id="sort" style="text-decoration: none">Sort by</a>
 
         <div class="buttonSection">
             <div class="buttons">
@@ -17,13 +18,11 @@
                         button.addEventListener('click', () => {
                             link.innerHTML = button.value;
                             window.location.href = "\\recipes\\sort?sort=" + button.value;
-//                             link.href = '\\recipes\\sort?sort=' + button.value;
                         });
                     }
                     link.style.textDecoration = "none";
                 </script>
                 <link rel="shortcut icon" href="Files\Icons\title_Icon.ico" />
-
 
             </div>
             <div class="emptySection"></div>
